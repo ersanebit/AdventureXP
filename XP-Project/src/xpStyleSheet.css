@@ -1,0 +1,21 @@
+.root{
+-fx-background-color: pink;
+-fx-text-fill: gold;
+}
+.splitPane{
+-fx-background-color: pink;
+-fx-text-fill: gold;
+}
+.gridPane{
+-fx-background-color: pink;
+-fx-text-fill: gold;
+}
+.anchorPane{
+-fx-background-color: pink;
+-fx-text-fill: gold;
+}
+.button{
+-fx-background-color: black;
+-fx-text-fill: gold;
+-fx-border-color: gold;
+}

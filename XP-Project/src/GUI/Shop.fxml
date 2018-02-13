@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="415.0" prefWidth="645.0" stylesheets="@../xpStyleSheet.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SellingController">
+   <children>
+      <TableView fx:id="productsTbl" layoutY="359.0" onMouseClicked="#productsClick" prefHeight="509.0" prefWidth="259.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="40.0">
+        <columns>
+          <TableColumn fx:id="productClmn" prefWidth="118.0" text="Product" />
+          <TableColumn fx:id="unitPriceClmn" prefWidth="140.0" text="Price per unit" />
+        </columns>
+      </TableView>
+      <TableView fx:id="selectedTbl" layoutX="220.0" layoutY="40.0" onMouseClicked="#selectedClick" prefHeight="389.0" prefWidth="499.0" AnchorPane.bottomAnchor="130.0" AnchorPane.leftAnchor="279.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="40.0">
+        <columns>
+          <TableColumn fx:id="selectedProductClmn" prefWidth="169.0" text="Product" />
+          <TableColumn fx:id="quanClmn" prefWidth="70.0" text="Quantity" />
+            <TableColumn fx:id="selectedsPriceClmn" prefWidth="82.0" text="Price" />
+        </columns>
+      </TableView>
+      <Label layoutX="14.0" layoutY="23.0" text="Products available:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="23.0" />
+      <TextField fx:id="idField" layoutX="630.0" layoutY="444.0" prefHeight="25.0" prefWidth="172.0" AnchorPane.bottomAnchor="90.0" AnchorPane.rightAnchor="10.0" />
+      <TextField fx:id="phoneField" layoutX="630.0" layoutY="484.0" prefHeight="25.0" prefWidth="172.0" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="10.0" />
+      <Label layoutX="475.0" layoutY="448.0" text="Booking ID:" AnchorPane.bottomAnchor="94.0" AnchorPane.rightAnchor="251.0" />
+      <Button fx:id="cancelBtn" layoutX="607.0" layoutY="524.0" mnemonicParsing="false" onAction="#cancelClick" prefWidth="80.0" text="Cancel" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="101.0" />
+      <Button fx:id="purchaseBtn" layoutX="694.0" layoutY="520.0" mnemonicParsing="false" onAction="#purchaseClick" prefHeight="25.0" prefWidth="80.0" text="Purchase" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+      <Label layoutX="476.0" layoutY="488.0" text="Booking phone no.:" AnchorPane.bottomAnchor="54.0" AnchorPane.rightAnchor="208.0" />
+      <Label layoutX="279.0" layoutY="23.0" text="Products Selected:" />
+      <Label fx:id="msgLbl" alignment="CENTER_RIGHT" layoutX="572.0" layoutY="528.0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="200.0" />
+   </children>
+</AnchorPane>

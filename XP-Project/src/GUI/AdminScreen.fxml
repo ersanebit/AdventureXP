@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="mainAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../xpStyleSheet.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AdminController">
+   <children>
+      <VBox layoutX="6.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="Menu">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#bookingScreen" text="Bookings" />
+                        <MenuItem mnemonicParsing="false" onAction="#activityScreen" text="Activities" />
+                        <MenuItem mnemonicParsing="false" onAction="#statisticScreen" text="Statistics" />
+                        <MenuItem mnemonicParsing="false" onAction="#instructorScreen" text="Instructors" />
+                        <MenuItem mnemonicParsing="false" onAction="#shopOpen" text="Shop" />
+                        <MenuItem mnemonicParsing="false" onAction="#logout" text="Logout" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <AnchorPane fx:id="anchor" prefHeight="376.0" prefWidth="600.0" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="376.0" prefWidth="600.0" stylesheets="@../xpStyleSheet.css" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BookingController">
+   <children>
+      <GridPane layoutX="164.0" layoutY="24.0" prefHeight="297.0" prefWidth="428.0">
+         <children>
+            <Label text="Name:" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label text="Email:" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label text="Phone number:" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label text="Number of participants:" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Label text="Date:" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Start time:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="End time:" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <DatePicker fx:id="dateField" prefHeight="25.0" prefWidth="280.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <ChoiceBox fx:id="startField" prefHeight="25.0" prefWidth="273.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <ChoiceBox fx:id="endField" prefHeight="25.0" prefWidth="276.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <TextField fx:id="nameField" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <TextField fx:id="emailField" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <TextField fx:id="phoneField" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <TextField fx:id="partField" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <Label text="Activity:" GridPane.columnIndex="1" />
+            <ChoiceBox fx:id="activityBox" prefHeight="25.0" prefWidth="273.0" GridPane.columnIndex="2" />
+            <ChoiceBox fx:id="instructorBox" prefHeight="25.0" prefWidth="276.0" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+            <Label text="Instructor:" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="219.0" minWidth="10.0" prefWidth="163.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="324.0" minWidth="10.0" prefWidth="271.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <TableView fx:id="bookingTableView" prefHeight="349.0" prefWidth="158.0">
+        <columns>
+           <TableColumn prefWidth="157.0" text="Bookings">
+              <cellValueFactory><PropertyValueFactory property="name" /></cellValueFactory>
+           </TableColumn>
+        </columns>
+      </TableView>
+      <TextField fx:id="filterField" layoutY="350.0" prefHeight="25.0" prefWidth="158.0" promptText="Search booking" />
+      <HBox layoutX="378.0" layoutY="338.0" prefHeight="25.0" prefWidth="201.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#deleteBookings" prefHeight="25.0" prefWidth="100.0" text="Cancel booking" />
+            <Button mnemonicParsing="false" onAction="#editBooking" prefHeight="25.0" prefWidth="100.0" text="Save changes" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
